@@ -185,7 +185,8 @@ int main() {
     crow::SimpleApp app;
 
     // Enable CORS (Allows your HTML page to talk to this C++ app)
-    CROW_ROUTE(app, "/search")
+    // Change the routes in your main function to match the JS call
+    CROW_ROUTE(app, "/api/search") // Added /api/ prefix
     .methods("OPTIONS"_method)
     ([](const crow::request& req) {
         auto response = crow::response(200);
@@ -195,8 +196,7 @@ int main() {
         return response;
     });
 
-    // The Search Logic
-    CROW_ROUTE(app, "/search")
+    CROW_ROUTE(app, "/api/search") // Added /api/ prefix
     .methods("POST"_method)
     ([](const crow::request& req) {
         auto x = crow::json::load(req.body);
@@ -209,7 +209,6 @@ int main() {
         StringMatching solver(text);
         vector<int> indices;
 
-        // Select Algorithm
         if (algo == "naive") {
             indices = solver.naiveStringMatching(pattern);
         } else if (algo == "kmp") {
@@ -217,22 +216,25 @@ int main() {
         } else if (algo == "hashing") {
             indices = solver.rabinKarp(pattern);
         } else {
-            // Default to Naive if "horspool" (since it's not in your cpp yet)
-            // Or you can add your Horspool function to the class above
+            // Handle horspool or others by defaulting to naive
             indices = solver.naiveStringMatching(pattern);
         }
 
-        // Convert Indices to Row/Col for the website
         crow::json::wvalue responseJson;
+        // Include additional metadata for the frontend
+        responseJson["count"] = (int)indices.size();
+        responseJson["algorithm"] = algo;
+        responseJson["pattern"] = pattern;
+
         for (int i = 0; i < indices.size(); ++i) {
             MatchResult loc = getRowCol(text, indices[i]);
             responseJson["matches"][i]["row"] = loc.row;
             responseJson["matches"][i]["col"] = loc.col;
+            responseJson["matches"][i]["pos"] = indices[i]; // Keep index for display
         }
 
-        // If no matches, ensure we send an empty list
         if (indices.empty()) {
-            responseJson["matches"] = std::vector<string>(); 
+            responseJson["matches"] = std::vector<int>(); 
         }
 
         auto response = crow::response(responseJson);

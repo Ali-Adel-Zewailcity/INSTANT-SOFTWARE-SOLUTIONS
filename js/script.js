@@ -159,17 +159,49 @@ async function callCppApi(text, pattern, algorithm) {
         }
         
         const data = await response.json();
+
+        // Normalize matches so each entry is an object with pos,row,col
+        if (Array.isArray(data.matches)) {
+            data.matches = data.matches.map(m => {
+                if (typeof m === 'number') {
+                    const rc = computeRowColFromText(text, m);
+                    return { pos: m, row: rc.row, col: rc.col };
+                } else if (m && typeof m.pos === 'number' && (typeof m.row === 'undefined' || typeof m.col === 'undefined')) {
+                    const rc = computeRowColFromText(text, m.pos);
+                    return { pos: m.pos, row: rc.row, col: rc.col };
+                }
+                return m;
+            });
+        }
+
+        console.log('API response (normalized):', data);
         return data;
         
     } catch (error) {
         console.error('API Error:', error);
         
-        // Fallback to simulated results for demonstration
+        // Fallback to simulated results for demonstration (now includes row/col)
         return simulateSearch(text, pattern, algorithm);
     }
 }
 
+// Helper: compute row/col for an index in the text
+function computeRowColFromText(text, index) {
+    let row = 1;
+    let col = 1;
+    for (let i = 0; i < index; i++) {
+        if (text[i] === '\n') {
+            row++;
+            col = 1;
+        } else {
+            col++;
+        }
+    }
+    return { row, col };
+}
+
 // Simulated Search (for testing without backend)
+// Returns match objects { pos, row, col } so frontend can display rows/cols even when backend is down
 function simulateSearch(text, pattern, algorithm) {
     const matches = [];
     const lowerText = text.toLowerCase();
@@ -177,7 +209,12 @@ function simulateSearch(text, pattern, algorithm) {
     
     let index = lowerText.indexOf(lowerPattern);
     while (index !== -1) {
-        matches.push(index);
+        const rc = computeRowColFromText(text, index);
+        matches.push({
+            pos: index,
+            row: rc.row,
+            col: rc.col
+        });
         index = lowerText.indexOf(lowerPattern, index + 1);
     }
     
@@ -234,15 +271,18 @@ function displayResults(result) {
         </div>
     `;
     
+    // Inside displayResults(result) in script.js:
+    // Update the mapping part to show Row and Col returned by C++
     if (matchCount > 0) {
         html += `
             <div class="matches-section">
                 <h4 style="color: var(--accent-gold); margin-bottom: 1rem;">Match Positions:</h4>
                 <div class="matches-grid">
-                    ${matches.slice(0, 20).map((pos, idx) => `
+                    ${matches.slice(0, 20).map((match, idx) => `
                         <div class="match-item">
                             <span class="match-label">Match ${idx + 1}:</span>
-                            <span class="match-position">Position ${pos}</span>
+                            <span class="match-position">Line ${match.row}, Col ${match.col}</span>
+                            <small style="color: gray;">(Index: ${match.pos})</small>
                         </div>
                     `).join('')}
                     ${matchCount > 20 ? `<div class="match-item" style="grid-column: 1/-1; text-align: center; color: var(--accent-gold);">... and ${matchCount - 20} more matches</div>` : ''}
