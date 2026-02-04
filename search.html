@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TRIGGER SENSE - Movie Search</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Work+Sans:wght@300;400;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/search.css">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark custom-navbar">
+        <div class="container-fluid px-4">
+            <a class="navbar-brand brand-text" href="index.html">
+                <img src="images/ChatGPT_Image_Feb_4_2026_02_15_54_AM.png" alt="TRIGGER SENSE" class="logo-img me-2"
+                    onerror="this.style.display='none';">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Algorithm Test</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="sentiment.html">Sentiment Analysis</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="search.html">Movie Search</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Container -->
+    <div class="main-container">
+        <div class="content-box">
+            <div class="box-header">
+                <h1 class="page-title">MOVIE SEARCH ENGINE</h1>
+                <p class="subtitle">Search movies using KMP String Matching Algorithm</p>
+            </div>
+
+            <!-- Info Banner -->
+            <div class="info-banner">
+                <i class="fas fa-info-circle me-2"></i>
+                Search for movies by name. The KMP algorithm will find all matching movies and display their complete information including ratings, genres, sequels, and cast.
+            </div>
+
+            <!-- Search Section -->
+            <div class="search-section">
+                <label class="form-label control-label">ENTER MOVIE NAME</label>
+                <div class="search-input-wrapper">
+                    <input type="text" id="searchInput" class="form-control custom-input"
+                        placeholder="e.g., Avatar, Star Wars, Harry Potter...">
+                    <button id="searchBtn" class="btn custom-search-btn">
+                        <i class="fas fa-search me-2"></i>SEARCH
+                    </button>
+                </div>
+            </div>
+
+            <!-- Loading Indicator -->
+            <div id="loadingIndicator" class="loading-indicator" style="display: none;">
+                <div class="spinner-border text-light" role="status">
+                    <span class="visually-hidden">Loading...</span>
+                </div>
+                <p class="mt-3">Searching movies database...</p>
+            </div>
+
+            <!-- Results Section -->
+            <div id="resultsSection" class="results-section" style="display: none;">
+                <div class="results-header">
+                    <h3 class="results-title">SEARCH RESULTS</h3>
+                    <div id="searchStats" class="search-stats"></div>
+                </div>
+                <div id="resultsContent" class="results-content"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/movie_data.js"></script>
+    <script src="js/search.js"></script>
+</body>
+
+</html>

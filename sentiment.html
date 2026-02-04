@@ -28,6 +28,9 @@
                     <li class="nav-item">
                         <a class="nav-link active" href="sentiment.html">Sentiment Analysis</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="search.html">Movie Search</a>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -50,8 +53,19 @@
             <!-- Input Section -->
             <div class="sentiment-input-section">
                 <label class="form-label control-label">ENTER TEXT TO ANALYZE</label>
-                <textarea id="sentimentText" class="form-control custom-textarea" rows="6" 
-                    placeholder="Type or paste your text here for sentiment analysis..."></textarea>
+                <div class="text-highlight-container">
+                    <div id="highlightOverlay" class="highlight-overlay" aria-hidden="true"></div>
+                    <textarea id="sentimentText" class="form-control custom-textarea" rows="6" 
+                        placeholder="Type or paste your text here for sentiment analysis..."></textarea>
+                </div>
+                <div class="highlight-legend" id="highlightLegend" style="display: none;">
+                    <span class="legend-title"><i class="fas fa-highlighter me-1"></i>Highlighted Words:</span>
+                    <span class="legend-item anger">Anger</span>
+                    <span class="legend-item sadness">Sadness</span>
+                    <span class="legend-item anxiety">Anxiety</span>
+                    <span class="legend-item stress">Stress</span>
+                    <span class="legend-item other">Other</span>
+                </div>
             </div>
 
             <!-- Algorithm Selection for Sentiment -->

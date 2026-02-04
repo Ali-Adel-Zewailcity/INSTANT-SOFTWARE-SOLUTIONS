@@ -1,0 +1,107 @@
+{
+  "anger": [
+    {"word": "hate", "weight": 8, "suggestion": "dislike"}, {"word": "furious", "weight": 9, "suggestion": "upset"},
+    {"word": "stupid", "weight": 7, "suggestion": "unwise"}, {"word": "revenge", "weight": 10, "suggestion": "justice"},
+    {"word": "idiot", "weight": 8, "suggestion": "misinformed"}, {"word": "disgusting", "weight": 8, "suggestion": "unpleasant"},
+    {"word": "resent", "weight": 7, "suggestion": "envy"}, {"word": "rage", "weight": 10, "suggestion": "strong anger"},
+    {"word": "scum", "weight": 9, "suggestion": "unpleasant person"}, {"word": "hostile", "weight": 8, "suggestion": "unfriendly"}
+  ],
+  "sadness": [
+    {"word": "failure", "weight": 9, "suggestion": "learning step"}, {"word": "hopeless", "weight": 10, "suggestion": "seeking hope"},
+    {"word": "depressed", "weight": 9, "suggestion": "feeling low"}, {"word": "miserable", "weight": 8, "suggestion": "uncomfortable"},
+    {"word": "worthless", "weight": 10, "suggestion": "valuable"}, {"word": "heartbroken", "weight": 9, "suggestion": "healing"},
+    {"word": "sorrow", "weight": 7, "suggestion": "reflection"}, {"word": "gloomy", "weight": 6, "suggestion": "shadowy"},
+    {"word": "unhappy", "weight": 7, "suggestion": "dissatisfied"}, {"word": "pathetic", "weight": 8, "suggestion": "struggling"}
+  ],
+  "stress": [
+    {"word": "overwhelmed", "weight": 9, "suggestion": "busy"}, {"word": "burnout", "weight": 9, "suggestion": "need rest"},
+    {"word": "exhausted", "weight": 8, "suggestion": "tired"}, {"word": "pressure", "weight": 7, "suggestion": "challenge"},
+    {"word": "deadline", "weight": 6, "suggestion": "milestone"}, {"word": "suffocating", "weight": 10, "suggestion": "crowded"},
+    {"word": "unbearable", "weight": 9, "suggestion": "hard"}, {"word": "overworked", "weight": 8, "suggestion": "fully loaded"},
+    {"word": "collapsing", "weight": 10, "suggestion": "needing a break"}, {"word": "tension", "weight": 7, "suggestion": "focus"}
+  ],
+  "anxiety": [
+    {"word": "anxious", "weight": 8, "suggestion": "concerned"}, {"word": "panic", "weight": 9, "suggestion": "sudden rush"},
+    {"word": "worried", "weight": 7, "suggestion": "thinking"}, {"word": "nervous", "weight": 6, "suggestion": "alert"},
+    {"word": "dread", "weight": 9, "suggestion": "anticipation"}, {"word": "restless", "weight": 7, "suggestion": "active"},
+    {"word": "shaking", "weight": 8, "suggestion": "vibrating"}, {"word": "apprehensive", "weight": 7, "suggestion": "aware"},
+    {"word": "jittery", "weight": 6, "suggestion": "energetic"}, {"word": "overthinking", "weight": 7, "suggestion": "analyzing"}
+  ],
+  "loneliness": [
+    {"word": "alone", "weight": 7, "suggestion": "independent"}, {"word": "isolated", "weight": 8, "suggestion": "private"},
+    {"word": "abandoned", "weight": 10, "suggestion": "let go"}, {"word": "rejected", "weight": 9, "suggestion": "not chosen"},
+    {"word": "ignored", "weight": 8, "suggestion": "overlooked"}, {"word": "unloved", "weight": 10, "suggestion": "seeking care"},
+    {"word": "excluded", "weight": 8, "suggestion": "left out"}, {"word": "invisible", "weight": 7, "suggestion": "quiet"},
+    {"word": "solitary", "weight": 6, "suggestion": "self-reliant"}, {"word": "lonesome", "weight": 7, "suggestion": "quiet"}
+  ],
+  "cyberbullying": [
+    {"word": "fat", "weight": 9, "suggestion": "unique shape"}, {"word": "ugly", "weight": 9, "suggestion": "unconventional"},
+    {"word": "kill yourself", "weight": 10, "suggestion": "please stay safe"}, {"word": "freak", "weight": 8, "suggestion": "unique"},
+    {"word": "loser", "weight": 8, "suggestion": "rising star"}, {"word": "nerd", "weight": 5, "suggestion": "genius"},
+    {"word": "dumb", "weight": 7, "suggestion": "learning"}, {"word": "weak", "weight": 7, "suggestion": "growing"},
+    {"word": "garbage", "weight": 8, "suggestion": "undervalued"}, {"word": "weirdo", "weight": 7, "suggestion": "original"}
+  ],
+  "trauma": [
+    {"word": "ptsd", "weight": 9, "suggestion": "condition"}, {"word": "abuse", "weight": 10, "suggestion": "mistreatment"},
+    {"word": "victim", "weight": 9, "suggestion": "survivor"}, {"word": "flashback", "weight": 9, "suggestion": "memory"},
+    {"word": "assault", "weight": 10, "suggestion": "attack"}, {"word": "trigger", "weight": 8, "suggestion": "spark"},
+    {"word": "traumatized", "weight": 9, "suggestion": "impacted"}, {"word": "scarred", "weight": 8, "suggestion": "healing"},
+    {"word": "nightmare", "weight": 8, "suggestion": "bad dream"}, {"word": "shattered", "weight": 9, "suggestion": "rebuilding"}
+  ],
+  "self_harm": [
+    {"word": "cutting", "weight": 10, "suggestion": "hurting"}, {"word": "suicide", "weight": 10, "suggestion": "mental crisis"},
+    {"word": "end it all", "weight": 10, "suggestion": "find help"}, {"word": "die", "weight": 10, "suggestion": "survive"},
+    {"word": "bleeding", "weight": 9, "suggestion": "injury"}, {"word": "poison", "weight": 9, "suggestion": "harmful"},
+    {"word": "hanging", "weight": 10, "suggestion": "distress"}, {"word": "worthless life", "weight": 10, "suggestion": "precious life"},
+    {"word": "jump", "weight": 8, "suggestion": "leap"}, {"word": " overdose", "weight": 10, "suggestion": "medical emergency"}
+  ],
+  "eating_disorders": [
+    {"word": "anorexia", "weight": 9, "suggestion": "health issue"}, {"word": "bulimia", "weight": 9, "suggestion": "struggle"},
+    {"word": "skinny", "weight": 7, "suggestion": "lean"}, {"word": "starve", "weight": 10, "suggestion": "fast"},
+    {"word": "purge", "weight": 10, "suggestion": "cleanse"}, {"word": "obese", "weight": 8, "suggestion": "large"},
+    {"word": "calorie", "weight": 5, "suggestion": "energy unit"}, {"word": "binge", "weight": 9, "suggestion": "overeat"},
+    {"word": "vomit", "weight": 9, "suggestion": "get sick"}, {"word": "fatness", "weight": 8, "suggestion": "body mass"}
+  ],
+  "fear": [
+    {"word": "terrified", "weight": 9, "suggestion": "very afraid"}, {"word": "danger", "weight": 8, "suggestion": "risk"},
+    {"word": "threat", "weight": 9, "suggestion": "warning"}, {"word": "scared", "weight": 7, "suggestion": "cautious"},
+    {"word": "horror", "weight": 8, "suggestion": "intense fear"}, {"word": "creepy", "weight": 6, "suggestion": "unusual"},
+    {"word": "spooky", "weight": 5, "suggestion": "mysterious"}, {"word": "frightened", "weight": 7, "suggestion": "startled"},
+    {"word": "alarmed", "weight": 7, "suggestion": "alert"}, {"word": "paralyzed", "weight": 9, "suggestion": "frozen"}
+  ],
+  "grief": [
+    {"word": "death", "weight": 9, "suggestion": "passing"}, {"word": "loss", "weight": 8, "suggestion": "absence"},
+    {"word": "funeral", "weight": 7, "suggestion": "memorial"}, {"word": "buried", "weight": 8, "suggestion": "gone"},
+    {"word": "missing", "weight": 6, "suggestion": "away"}, {"word": "mourning", "weight": 8, "suggestion": "honoring"},
+    {"word": "orphan", "weight": 9, "suggestion": "parentless"}, {"word": "widow", "weight": 8, "suggestion": "partnerless"},
+    {"word": "tragedy", "weight": 9, "suggestion": "sad event"}, {"word": "farewell", "weight": 5, "suggestion": "goodbye"}
+  ],
+  "low_self_esteem": [
+    {"word": "not good enough", "weight": 9, "suggestion": "growing"}, {"word": "ugly", "weight": 8, "suggestion": "unique"},
+    {"word": "ashamed", "weight": 8, "suggestion": "regretful"}, {"word": "embarrassed", "weight": 7, "suggestion": "shy"},
+    {"word": "failure", "weight": 9, "suggestion": "triumph in progress"}, {"word": "clumsy", "weight": 5, "suggestion": "learning"},
+    {"word": "loser", "weight": 8, "suggestion": "evolving"}, {"word": "mistake", "weight": 6, "suggestion": "lesson"},
+    {"word": "guilty", "weight": 7, "suggestion": "responsible"}, {"word": "awkward", "weight": 5, "suggestion": "original"}
+  ],
+  "addiction": [
+    {"word": "cravings", "weight": 8, "suggestion": "desire"}, {"word": "relapse", "weight": 9, "suggestion": "setback"},
+    {"word": "withdrawal", "weight": 9, "suggestion": "recovery process"}, {"word": "alcoholic", "weight": 8, "suggestion": "struggling"},
+    {"word": "drugs", "weight": 9, "suggestion": "substances"}, {"word": "junkie", "weight": 10, "suggestion": "patient"},
+    {"word": "sober", "weight": 4, "suggestion": "clean"}, {"word": "addict", "weight": 9, "suggestion": "person in recovery"},
+    {"word": "pills", "weight": 7, "suggestion": "medication"}, {"word": "smoke", "weight": 6, "suggestion": "vape"}
+  ],
+  "betrayal": [
+    {"word": "cheated", "weight": 9, "suggestion": "betrayed"}, {"word": "lied", "weight": 8, "suggestion": "misled"},
+    {"word": "backstabbed", "weight": 10, "suggestion": "let down"}, {"word": "unfaithful", "weight": 9, "suggestion": "disloyal"},
+    {"word": "traitor", "weight": 10, "suggestion": "opponent"}, {"word": "scam", "weight": 8, "suggestion": "fraud"},
+    {"word": "deceived", "weight": 9, "suggestion": "tricked"}, {"word": "faked", "weight": 7, "suggestion": "simulated"},
+    {"word": "double-crossed", "weight": 10, "suggestion": "misled"}, {"word": "distrust", "weight": 7, "suggestion": "caution"}
+  ],
+  "workplace_toxicity": [
+    {"word": "fired", "weight": 9, "suggestion": "let go"}, {"word": "bossy", "weight": 7, "suggestion": "directive"},
+    {"word": "harassment", "weight": 10, "suggestion": "misconduct"}, {"word": "hostile", "weight": 8, "suggestion": "challenging"},
+    {"word": "micromanage", "weight": 7, "suggestion": "closely monitor"}, {"word": "unpaid", "weight": 8, "suggestion": "volunteer"},
+    {"word": "unfair", "weight": 7, "suggestion": "biased"}, {"word": "demoted", "weight": 9, "suggestion": "repositioned"},
+    {"word": "overtime", "weight": 6, "suggestion": "extra hours"}, {"word": "quitting", "weight": 7, "suggestion": "resigning"}
+  ]
+}
