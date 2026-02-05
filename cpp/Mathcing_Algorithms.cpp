@@ -1,4 +1,4 @@
-#include "crow_all.h" // Ensure this is " " not < >
+#include "crow_all.h"
 #include <iostream>
 #include <vector>
 #include <cmath>
@@ -7,7 +7,6 @@
 
 using namespace std;
 
-// --- Your Algorithm Class (Integrated & Thread-Safe) ---
 class StringMatching {
 protected:
     string text;
